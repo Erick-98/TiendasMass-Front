@@ -1,0 +1,20 @@
+/* categoryCarousel.css */
+
+/* Ajusta el espaciado entre slides */
+.slide-item {
+  padding: 0 10px;
+}
+
+/* Reutiliza tus estilos de categoria.css para los cards */
+@import '../categoria/categoria.css';
+
+/* (Opcional) Si quieres cambiar algo solo para el carousel,
+   por ejemplo un hover más pronunciado: */
+.slide-item .category-card:hover {
+  transform: scale(1.05);
+  
+}
+
+.category-name h3{
+  color: antiquewhite !important;
+}

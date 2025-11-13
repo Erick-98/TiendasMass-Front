@@ -1,0 +1,211 @@
+
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* Contenedor principal */
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  padding: 20px;
+  position: relative;
+  
+  
+
+}
+.auth-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/bannerfondomass.png');
+    background-size: cover;
+    background-position: center;
+    filter:  brightness(0.7); 
+    z-index: 1;
+  }
+
+/* Tarjeta de autenticación */
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+  opacity: 0.95;
+  
+ 
+  
+}
+
+/* Logo contenedor */
+.logo-container {
+  background-color: #FFD100;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.logo-placeholder {
+  height: 96px;
+  width: 192px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.company-logo {
+  max-height: 96px;
+  max-width: 100%;
+}
+
+/* Contenedor del formulario */
+.form-container {
+  padding: 24px;
+}
+
+/* Título del formulario */
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #082EB7;
+  margin-bottom: 32px;
+}
+
+/* Grupos de formularios */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #082EB7;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #082EB7;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px #082EB7;
+}
+
+/* Opciones del formulario (recordarme y olvidé contraseña) */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.remember-me input {
+  margin-right: 8px;
+}
+
+.remember-me label {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.forgot-password a {
+  font-size: 14px;
+  color: #082EB7;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Botón de envío */
+.submit-button {
+  width: 100%;
+  background-color: #FFD100;
+  color: #0A2DB5;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+ 
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 24px;
+  font-weight: bold;
+}
+
+.submit-button:hover {
+  background-color: #FDDD00;
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Pie de formulario */
+.form-footer {
+  text-align: center;
+}
+
+.form-footer p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.switch-form-button {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.switch-form-button:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .forgot-password {
+    margin-top: 8px;
+  }
+}

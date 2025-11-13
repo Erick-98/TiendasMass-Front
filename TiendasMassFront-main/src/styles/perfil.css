@@ -1,0 +1,251 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contenedor principal */
+.user-profile {
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #1e293b;
+}
+
+.header-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: #FFD100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Botón menú móvil */
+.mobile-menu-toggle {
+  display: none;
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 1100;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.75rem;
+  color: #64748b;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.mobile-menu-toggle:hover {
+  background: #f1f5f9;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px -8px rgba(0, 0, 0, 0.25);
+}
+
+/* Contenedor flex: sidebar + contenido */
+.profile-container {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+  margin-top: 60px;
+}
+
+/* Barra lateral - no fixed para escritorio */
+.sidebar {
+  width: 280px;
+  background: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+
+/* Menú móvil cerrado: ocultar sidebar */
+.sidebar.mobile-open {
+  transform: translateX(0);
+}
+
+/* Información usuario en sidebar */
+.user-info {
+  padding: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.user-details {
+  text-align: center;
+}
+
+.user-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.user-email {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+/* Navegación sidebar */
+.navigation {
+  flex: 1;
+  padding: 1rem 0;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0 1rem;
+}
+
+.menu-item {
+  margin-bottom: 0.25rem;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  color: #64748b;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border: none;
+  background: none;
+  text-align: left;
+}
+
+.menu-link:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.menu-link.active {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.menu-icon {
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* Footer sidebar */
+.sidebar-footer {
+  padding: 1rem;
+  border-top: 1px solid #505255;
+}
+
+.logout-link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  color: #ef4444;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border: none;
+  background: none;
+  text-align: left;
+}
+.inicio {
+  color: #1e293b;
+}
+.inicio:hover {
+  color: #3b82f6;
+  background-color: #e2e8f0 !important;
+}
+
+.logout-link:hover {
+  background: #fef2f2;
+}
+
+/* Contenido principal */
+
+
+
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* Mobile overlay */
+.mobile-overlay {
+  display: none;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    width: 280px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 1200;
+  }
+
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .mobile-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    /* menos opaco */
+    z-index: 1099;
+    /* debajo del sidebar */
+    pointer-events: auto;
+    /* permite click para cerrar */
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 0.75rem;
+  }
+}

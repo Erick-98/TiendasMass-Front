@@ -1,0 +1,136 @@
+/* Home.css */
+html, body {
+  height: 100%; /* Asegura que el contenedor principal ocupe toda la altura de la pantalla */
+  margin: 0;
+}
+.banner-container {
+ background-color: #082EB7;
+}
+.home-page {
+  min-height: 100vh; /* Hace que la altura mínima de la página sea igual a la altura de la pantalla */
+  padding-top: 0; /* Añade algo de espacio en la parte superior si es necesario */
+}
+
+.banner-section img {
+  width: 100%;
+  max-height: none;
+  object-fit: cover; /* Asegura que la imagen se ajuste correctamente sin distorsión */
+}
+
+.container {
+  max-width: 1200px; /* Limita el tamaño máximo del contenido */
+  
+}
+
+.text-center {
+  text-align: center; /* Centra el texto */
+}
+
+.my-5 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 15px;
+}
+
+@media (max-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+.blue-container {
+  background-color: #D6F8F4;
+
+}
+.blue-container h2 {
+ font-weight: 900;
+ margin: 0px 0px 8px;
+  font-size: 2.5rem;
+}
+
+/* Fondo azul que ocupa todo el ancho */
+.bg-azul-personalizado {
+  background-color: #082EB7;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  border-radius: 0px 0px 40px 40px ; /* Bordes redondeados */
+
+ 
+}
+.bg-azul-personalizado strong {
+  color: #FFD100; /* amarillo para strong */
+}
+/* Fondo claro que ocupa todo el ancho */
+.bg-light-custom {
+  background-color: #d6f8f4;
+  width: 100%;
+}
+/*productos*/
+.sub {
+  color:#082EB7 !important;
+  font-weight: 900;
+ margin: 0px 0px 8px;
+  font-size: 2.5rem;
+}
+.bg-light-custom2{
+  background-color:#FFF8D9 !important; ;
+}
+
+/* Bootstrap container ya centra y limita ancho */
+/* Por eso no agregamos max-width o margin al bg-azul-personalizado ni bg-light-custom */
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.p{
+  color:#ffffff !important;
+}
+
+/* Opcional para que el botón resalte */
+.btn-light {
+  color: #082EB7;          /* texto azul */
+  background-color: #FFD100; /* fondo amarillo */
+  font-weight: bold;
+  border: none;           /* opcional, si quieres sin borde */
+}
+
+.btn-light:hover {
+  background-color: #e6c200; /* un amarillo más oscuro al hover */
+  color: #082EB7;             /* texto sigue azul */
+}
+@media (max-width: 767px) {
+  /* Centrar el botón como antes */
+  .btn.btn-light {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+
+  /* Espacio extra encima de la imagen cuando está en móvil */
+  .col-md-6.text-center img {
+    margin-top: 20px; /* o ajusta el valor que quieras */
+  }
+}
+
+
+
+
+
+
+

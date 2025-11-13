@@ -1,0 +1,94 @@
+.productos-container {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  max-height: 80vh;
+  overflow-y: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.productos-container h2 {
+  color: #0033a0;
+  font-weight: 700;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #ffd100;
+  padding-bottom: 8px;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.productos-grid li {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.productos-grid li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+}
+
+.productos-grid img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.productos-grid h3 {
+  font-size: 1.1rem;
+  color: #0033a0;
+  margin: 12px 16px 8px;
+  flex-grow: 0;
+}
+
+.productos-grid p {
+  color: #555;
+  font-size: 0.9rem;
+  margin: 0 16px 16px;
+  flex-grow: 1;
+}
+.btn-agregar-carrito {
+  margin: 12px 16px 16px;
+  padding: 10px 14px;
+  background-color: #0033a0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  width: calc(100% - 32px);
+}
+
+.btn-agregar-carrito:hover {
+  background-color: #001e5a;
+}
+
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .productos-container {
+    max-height: none;
+    padding: 16px;
+  }
+  
+  .productos-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}

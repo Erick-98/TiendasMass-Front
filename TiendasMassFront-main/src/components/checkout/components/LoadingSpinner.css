@@ -1,0 +1,418 @@
+/* ============================================
+   LOADING SPINNER - ESTILOS MEJORADOS
+   ============================================ */
+
+/* ===========================
+   BASE STYLES
+   =========================== */
+
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.loading-spinner__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.loading-spinner__icon {
+  color: #e53e3e;
+  animation: spin 1s linear infinite;
+  display: block;
+  flex-shrink: 0;
+}
+
+.loading-spinner__message {
+  margin: 0;
+  color: #666;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* ===========================
+   SIZE VARIANTS
+   =========================== */
+
+/* Small - Para secciones pequeñas */
+.loading-spinner--small {
+  padding: 20px;
+  min-height: 150px;
+}
+
+.loading-spinner--small .loading-spinner__icon {
+  font-size: 32px;
+}
+
+.loading-spinner--small .loading-spinner__message {
+  font-size: 14px;
+}
+
+/* Medium - Tamaño por defecto */
+.loading-spinner--medium {
+  padding: 40px 20px;
+  min-height: 300px;
+}
+
+.loading-spinner--medium .loading-spinner__icon {
+  font-size: 48px;
+}
+
+.loading-spinner--medium .loading-spinner__message {
+  font-size: 16px;
+}
+
+/* Large - Para páginas completas */
+.loading-spinner--large {
+  padding: 80px 20px;
+  min-height: 500px;
+}
+
+.loading-spinner--large .loading-spinner__icon {
+  font-size: 64px;
+}
+
+.loading-spinner--large .loading-spinner__message {
+  font-size: 18px;
+}
+
+/* ===========================
+   VISUAL VARIANTS
+   =========================== */
+
+/* Primary - Con borde (por defecto) */
+.loading-spinner--primary {
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+/* Secondary - Sin borde, fondo gris */
+.loading-spinner--secondary {
+  background: #f7f7f7;
+  border: none;
+}
+
+/* Overlay - Cubre toda la pantalla con blur */
+.loading-spinner--overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: none;
+  border-radius: 0;
+  z-index: 9999;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.loading-spinner--overlay .loading-spinner__content {
+  background: white;
+  padding: 32px 48px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15),
+              0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ===========================
+   FULLSCREEN MODE
+   =========================== */
+
+.loading-spinner--fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  border-radius: 0;
+  min-height: 100vh;
+  border: none;
+}
+
+/* ===========================
+   INLINE LOADER
+   =========================== */
+
+.loading-spinner--inline {
+  display: inline-flex;
+  padding: 0;
+  min-height: auto;
+  width: auto;
+  background: transparent;
+  border: none;
+  vertical-align: middle;
+}
+
+.loading-spinner--inline .loading-spinner__content {
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+.loading-spinner--inline .loading-spinner__icon {
+  font-size: 20px;
+}
+
+.loading-spinner--inline .loading-spinner__message {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ===========================
+   LOADING DOTS (Variante)
+   =========================== */
+
+.loading-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.loading-dots__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e53e3e;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.loading-dots__dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loading-dots__dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.loading-dots__dot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+/* ===========================
+   SKELETON LOADER
+   =========================== */
+
+.skeleton-loader {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #e0e0e0 20%,
+    #f0f0f0 40%,
+    #f0f0f0 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+  display: block;
+}
+
+/* ===========================
+   ANIMATIONS
+   =========================== */
+
+/* Spin - Rotación del icono */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* FadeIn - Entrada suave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bounce - Puntos saltando */
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Shimmer - Efecto skeleton */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* ===========================
+   ACCESSIBILITY
+   =========================== */
+
+/* Reducir movimiento para usuarios con preferencias de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .loading-spinner__icon {
+    animation: none;
+  }
+  
+  .loading-dots__dot {
+    animation: none;
+  }
+  
+  .skeleton-loader {
+    animation: none;
+  }
+  
+  .loading-spinner {
+    animation: none;
+  }
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+@media (max-width: 640px) {
+  /* Reducir tamaño en móviles */
+  .loading-spinner--large {
+    padding: 40px 20px;
+    min-height: 300px;
+  }
+
+  .loading-spinner--large .loading-spinner__icon {
+    font-size: 48px;
+  }
+
+  .loading-spinner--large .loading-spinner__message {
+    font-size: 16px;
+  }
+
+  /* Ajustar padding del overlay */
+  .loading-spinner--overlay .loading-spinner__content {
+    padding: 24px 32px;
+    margin: 0 16px;
+  }
+
+  /* Reducir tamaño de puntos */
+  .loading-dots__dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Optimización para pantallas muy pequeñas */
+  .loading-spinner--medium {
+    padding: 30px 15px;
+    min-height: 200px;
+  }
+
+  .loading-spinner--medium .loading-spinner__icon {
+    font-size: 40px;
+  }
+
+  .loading-spinner--overlay .loading-spinner__content {
+    padding: 20px 24px;
+  }
+}
+
+/* ===========================
+   DARK MODE SUPPORT
+   =========================== */
+
+@media (prefers-color-scheme: dark) {
+  .loading-spinner--primary {
+    background: #1a1a1a;
+    border-color: #333;
+  }
+
+  .loading-spinner--secondary {
+    background: #2a2a2a;
+  }
+
+  .loading-spinner--overlay {
+    background: rgba(0, 0, 0, 0.95);
+  }
+
+  .loading-spinner--overlay .loading-spinner__content {
+    background: #1a1a1a;
+    border: 1px solid #333;
+  }
+
+  .loading-spinner__message {
+    color: #ccc;
+  }
+
+  .skeleton-loader {
+    background: linear-gradient(
+      90deg,
+      #2a2a2a 0%,
+      #3a3a3a 20%,
+      #2a2a2a 40%,
+      #2a2a2a 100%
+    );
+    background-size: 200% 100%;
+  }
+}
+
+/* ===========================
+   UTILITY CLASSES
+   =========================== */
+
+/* Para centrar el spinner en un contenedor */
+.loading-spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  width: 100%;
+}
+
+/* Para ocultar contenido mientras carga */
+.loading-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.loading-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s ease;
+}
+
+/* ===========================
+   PRINT STYLES
+   =========================== */
+
+@media print {
+  .loading-spinner,
+  .loading-spinner--overlay,
+  .loading-spinner--fullscreen {
+    display: none !important;
+  }
+}

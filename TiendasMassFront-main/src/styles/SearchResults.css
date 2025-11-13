@@ -1,0 +1,66 @@
+.search-results-page{
+    background-color:#D6F8F4 ;
+}
+.search-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+  background-color: #D6F8F4;
+}
+.search-title {
+  text-align: left;
+  color: #082EB7;
+  font-family: "Cocogoose Classic";
+  font-weight: 600;
+}
+
+.search-header {
+  text-align: left;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.search-header h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.search-header em {
+  color: #0033a0;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Grid para mostrar productos alineados a la izquierda */
+.productos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* CAMBIADO de flex-end a flex-start */
+  gap: 1.5rem;
+}
+
+/* Cada producto ocupa un ancho fijo */
+.producto-item {
+  flex: 0 0 250px;
+}
+
+/* Mensaje si no hay resultados */
+.empty-result {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #888;
+  padding: 2rem;
+}
+
+/* Responsive: centrar productos en pantallas pequeñas */
+@media (max-width: 768px) {
+  .productos-grid {
+    justify-content: center;
+  }
+
+  .producto-item {
+    flex: 0 0 100%;
+    max-width: 320px;
+  }
+}

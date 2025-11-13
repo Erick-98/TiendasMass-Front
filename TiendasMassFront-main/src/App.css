@@ -1,0 +1,28 @@
+/* layout.css */
+
+.layout-categorias-productos {
+  display: flex;
+  margin-top: 100px;
+  margin-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  flex: 0 0 300px; /* ancho fijo para sidebar */
+  position: sticky;
+  top: 75px; /* altura navbar */
+  max-height: calc(100vh - 75px);
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  z-index: 20;
+}
+
+.main-content {
+  flex: 1; /* toma todo el espacio restante */
+  margin-left: 20px; /* separacion con sidebar */
+  padding-bottom: 50px; /* para que no choque con footer */
+}

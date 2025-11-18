@@ -4,8 +4,7 @@ import { useCarrito } from '../../context/carContext';
 import { useUsuario } from '../../context/userContext';
 import { useNavigate } from 'react-router-dom';
 import ProductCard from './productCard';
-
-const API_URL = "http://localhost:443";
+import { API_URL } from '../../utils/constants';
 const Productos = ({ categoriaId,onProductClick }) => {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);

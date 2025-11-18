@@ -6,7 +6,7 @@ import { useCarrito } from '../../context/carContext';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './productcarousel.css';
-const API_URL = "http://localhost:443";
+import { API_URL } from '../../utils/constants';
 const ProductCarousel = ({ onProductClick }) => {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);

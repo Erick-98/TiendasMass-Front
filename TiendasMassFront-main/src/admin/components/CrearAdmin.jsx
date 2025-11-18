@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaUser, FaEnvelope, FaLock, FaEye, FaEyeSlash, FaUserShield, FaSave, FaTimes } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import './CrearAdmin.css';
-const API_URL = "http://localhost:443";
+import { API_URL } from '../../utils/constants';
 const CrearAdmin = () => {
   const [formData, setFormData] = useState({
     nombre: '',

@@ -4,9 +4,7 @@ import { Edit, Trash2, Eye, Plus, Search, AlertTriangle } from 'lucide-react';
 import axios from 'axios';
 import swal from 'sweetalert2';
 import { productValidators } from '../../utils/productosvalidaciones';
-
-// Base URL del API (no use el nombre global `URL` para evitar colisiones con la API Web `URL.createObjectURL`)
-const BASE_URL = "http://localhost:443";
+import { API_URL as BASE_URL } from '../../utils/constants';
 
 const ProductManager = () => {
   const API_URL = `${BASE_URL}/api/products`;

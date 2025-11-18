@@ -77,7 +77,7 @@ const validators = {
   }
 };
 
-const API_URL = "http://localhost:443";
+import { API_URL } from '../../utils/constants';
 
 const StatusManager = () => {
   const [statuses, setStatuses] = useState([]);

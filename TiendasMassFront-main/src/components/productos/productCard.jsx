@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Heart, Eye, ShoppingCart } from 'lucide-react';
 import './productcard.css';
-const API_URL = "http://localhost:443";
+import { API_URL } from '../../utils/constants';
 
 
 const categoriaColors = {

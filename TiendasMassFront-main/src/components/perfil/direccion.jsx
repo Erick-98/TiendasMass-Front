@@ -3,6 +3,7 @@ import { Edit3, Trash2, Plus, Star } from 'lucide-react';
 import './styleperfil.css';
 import Swal from 'sweetalert2';
 import { useUsuario } from '../../context/userContext';
+import { API_URL } from '../../utils/constants';
 
 const initialForm = {
   id: null,
@@ -14,7 +15,7 @@ const initialForm = {
   referencia: '',
   esPrincipal: false,
 };
-const API_URL = "http://localhost:443";
+
 const Addresses = () => {
   const { usuario, getAuthHeaders } = useUsuario();
   const [addresses, setAddresses] = useState([]);

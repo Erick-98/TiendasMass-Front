@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Eye, Download, Search, Filter } from 'lucide-react';
 import axios from 'axios';
 import swal from 'sweetalert2';
+import { API_URL } from '../../utils/constants';
 
 const OrderReports = () => {
   const [orders, setOrders] = useState([]);
@@ -11,8 +12,6 @@ const OrderReports = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [showOrderDetails, setShowOrderDetails] = useState(null);
   const [loading, setLoading] = useState(false);
-
-const API_URL = "http://localhost:443";
 
   useEffect(() => {
     fetchOrders();

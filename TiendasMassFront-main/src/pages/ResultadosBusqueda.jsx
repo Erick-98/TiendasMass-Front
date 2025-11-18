@@ -6,8 +6,7 @@ import Footer from '../components/footer/Footer';
 import ProductCard from '../components/productos/productCard';
 import '../styles/SearchResults.css';
 import ProductDetailModal from '../components/productos/detalleproductomodal';
-
-const API_URL = "http://localhost:443";
+import { API_URL } from '../utils/constants';
 
 const ResultadosBusqueda = () => {
     const [productos, setProductos] = useState([]);

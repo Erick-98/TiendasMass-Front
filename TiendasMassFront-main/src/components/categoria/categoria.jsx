@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './categoria.css';
-const API_URL = "http://localhost:443";
+import { API_URL } from '../../utils/constants';
 const Categoria = ({ onSelect }) => {
   const [categorias, setCategorias] = useState([]);
   const [loading, setLoading] = useState(true);

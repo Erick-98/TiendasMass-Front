@@ -3,10 +3,12 @@ import { User, Mail, Phone, Truck, Store, MapPin } from 'lucide-react';
 import { ErrorMessage } from '../components/ErrorMessage';
 import { parsePrice } from '../utils/formatters';
 
+import { API_URL } from '../../../utils/constants';
+
 const API_BASE =
   typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_API_URL
     ? String(import.meta.env.VITE_API_URL).replace(/\/+$/g, '')
-    : String('http://localhost:443').replace(/\/+$/g, '');
+    : String(API_URL).replace(/\/+$/g, '');
 
 const imageBase = API_BASE;
 

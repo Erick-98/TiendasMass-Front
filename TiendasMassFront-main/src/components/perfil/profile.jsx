@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Edit3 } from 'lucide-react';
 import './styleperfil.css';
 import Swal from 'sweetalert2';
-const API_URL = "http://localhost:443";
+import { API_URL } from '../../utils/constants';
 const Profile = ({ userData, setUserData }) => {
   const [isEditing, setIsEditing] = useState(false);
 

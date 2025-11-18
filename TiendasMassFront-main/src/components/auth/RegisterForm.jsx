@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import './AuthStyles.css';
-
-const API_URL = "http://localhost:443";
+import { API_URL } from '../../utils/constants';
 
 // ✅ Validaciones (mismo código)
 const validators = {

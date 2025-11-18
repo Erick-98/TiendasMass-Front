@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Edit, Trash2, Plus, Search } from 'lucide-react';
 import Swal from 'sweetalert2';
-
-const API_URL = "http://localhost:443";
+import { API_URL } from '../../utils/constants';
 
 const PaymentMethodManager = () => {
   const [paymentMethods, setPaymentMethods] = useState([]);

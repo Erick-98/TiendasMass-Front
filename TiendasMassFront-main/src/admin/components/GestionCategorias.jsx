@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Edit, Trash2, Plus, Search } from 'lucide-react';
 import axios from 'axios';
 import swal from 'sweetalert2';
-
-const URL = "http://localhost:443";
+import { API_URL as URL } from '../../utils/constants';
 
 const CategoryManager = () => {
   const [categories, setCategories] = useState([]);

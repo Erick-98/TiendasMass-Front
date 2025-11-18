@@ -1,6 +1,7 @@
 // Servicio para las llamadas API relacionadas con el checkout
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:443';
+import { API_URL } from '../../../utils/constants';
+const API_BASE = import.meta.env.VITE_API_URL || API_URL;
 
 export const checkoutService = {
   fetchMetodosPago: async () => {

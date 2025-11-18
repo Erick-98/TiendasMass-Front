@@ -1,6 +1,8 @@
 // src/utils/constants.js
 
-export const API_URL = "http://localhost:443";
+export const API_URL = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_API_URL)
+  ? import.meta.env.VITE_API_URL
+  : "https://backendtiendasmass-e6emcsagc9gududu.brazilsouth-01.azurewebsites.net";
 
 export const imageBase = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_API_URL)
   ? import.meta.env.VITE_API_URL

@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 import { useUsuario } from '../context/userContext';
 import SetupAdmin from '../admin/components/SetupAdmin';
-
-const API_URL = "http://localhost:443";
+import { API_URL } from '../utils/constants';
 
 const AdminRoute = ({ children }) => {
   const { usuario } = useUsuario();

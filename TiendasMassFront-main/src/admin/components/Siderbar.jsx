@@ -2,8 +2,7 @@ import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Home, Package, Folder, Users, ShoppingCart, Settings, CreditCard, UserPlus, LogOut } from 'lucide-react';
 import Swal from 'sweetalert2';
-
-const URL = "http://localhost:443"; // URL de Azure
+import { API_URL } from '../../utils/constants';
 
 const Sidebar = ({ collapsed, onToggle }) => {
   const location = useLocation();

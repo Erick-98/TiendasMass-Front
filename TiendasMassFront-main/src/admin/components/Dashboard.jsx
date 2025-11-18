@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Package, Users, ShoppingCart, DollarSign, TrendingUp, TrendingDown } from 'lucide-react';
 import Swal from 'sweetalert2';
-const API_URL = "http://localhost:443";
+import { API_URL } from '../../utils/constants';
 const Dashboard = () => {
   const [dashboardData, setDashboardData] = useState({
     estadisticas: {

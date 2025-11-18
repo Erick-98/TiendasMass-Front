@@ -3,7 +3,7 @@ import axios from 'axios';
 import Slider from 'react-slick';
 import '../carousel/categoriacarousel.css'; // Asegúrate de que la ruta sea correcta
 import '../categoria/categoria.css'; // Asegúrate de que la ruta sea correcta
-const API_URL = "http://localhost:443";
+import { API_URL } from '../../utils/constants';
 const CategoryCarousel = ({ onSelect }) => {
   const [categorias, setCategorias] = useState([]);
   const [loading, setLoading]     = useState(true);

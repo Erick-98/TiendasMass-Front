@@ -1,7 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
-
-
-const API_URL = "http://localhost:443";
+import { API_URL } from '../utils/constants';
 const UsuarioContext = createContext();
 
 export const UsuarioProvider = ({ children }) => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useUsuario } from '../../context/userContext'; // Asegúrate de tener este contexto
 import './styleperfil.css';
-const API_URL = "http://localhost:443";
+import { API_URL } from '../../utils/constants';
 
 const Orders = () => {
   const { usuario } = useUsuario();

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { FaUser, FaLock, FaEye, FaEyeSlash } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import './AdminLogin.css';
-const API_URL = "http://localhost:443";
+import { API_URL } from '../../utils/constants';
 const AdminLogin = () => {
   const [formData, setFormData] = useState({
     email: '',

@@ -1,6 +1,7 @@
 // Servicio para la integración con Mercado Pago
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:443';
+import { API_URL } from '../../../utils/constants';
+const API_BASE = import.meta.env.VITE_API_URL || API_URL;
 
 export const paymentService = {
   /**

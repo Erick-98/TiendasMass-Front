@@ -10,8 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import { useUsuario } from '../context/userContext';
 import '../styles/perfil.css';
 import logos from '../assets/logo.png';
-
-const API_URL = "http://localhost:443";
+import { API_URL } from '../utils/constants';
 
 const menuItems = [
   { id: 'profile', label: 'Mi Perfil', icon: User },

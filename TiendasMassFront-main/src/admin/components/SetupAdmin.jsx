@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { FaUser, FaEnvelope, FaLock, FaEye, FaEyeSlash, FaUserShield, FaSave, FaCheck } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import './SetupAdmin.css';
-const API_URL = "http://localhost:443";
+import { API_URL } from '../../utils/constants';
 const SetupAdmin = () => {
   const [formData, setFormData] = useState({
     nombre: '',

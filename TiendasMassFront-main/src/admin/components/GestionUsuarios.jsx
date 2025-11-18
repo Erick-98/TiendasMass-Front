@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Edit, Trash2, Plus, Search } from 'lucide-react';
+import { API_URL } from '../../utils/constants';
 
 // ============================================
 // 🔒 MÓDULO DE VALIDACIONES
@@ -224,8 +225,6 @@ const GestionUsuario = () => {
   
   const [fieldErrors, setFieldErrors] = useState({});
   const [showValidationSummary, setShowValidationSummary] = useState(false);
-
-  const API_URL = 'http://localhost:443';
 
   const rolMapping = {
     'admin': 'Administrador',

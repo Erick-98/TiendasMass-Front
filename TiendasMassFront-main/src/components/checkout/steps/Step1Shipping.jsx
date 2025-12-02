@@ -48,13 +48,7 @@ export const Step1Shipping = ({
           carrito.map((item) => (
             <div key={item.id} className="cart-item">
               <img
-                src={
-                  item.imagen
-                    ? `${String(imageBase).replace(/\/$/, '')}/${String(
-                        item.imagen
-                      ).replace(/^\//, '')}`
-                    : '/placeholder-image.jpg'
-                }
+                src={item.imagen || '/placeholder-image.jpg'}
                 alt={item.nombre}
                 onError={(e) => {
                   e.target.src = '/placeholder-image.jpg';

@@ -34,8 +34,7 @@ export default function ProductCard({ producto, onAdd, onClick }) {
         }}
       >
         <img
-          src={`${API_URL}/${producto.imagen}`}
-
+          src={producto.imagen || '/placeholder-image.jpg'}
           alt={producto.nombre}
           className={`product-image ${isHovered ? 'hovered' : ''}`}
         />

@@ -47,7 +47,7 @@ const ProductDetailModal = ({ product, isOpen, onClose }) => {
                   style={{ backgroundColor: categoriaColor }}
                 >
                   <img
-                    src={`${API_URL}/${product.imagen}`}
+                    src={product.imagen || '/placeholder-image.jpg'}
                     alt={product.nombre}
                     className="img-fluid rounded object-fit-contain"
                     style={{ maxHeight: '240px', maxWidth: '340px' }}
